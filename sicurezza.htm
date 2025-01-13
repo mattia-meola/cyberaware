@@ -3,66 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina HTML di Esempio</title>
+    <title>Cyber Aware - La tua guida alla sicurezza informatica</title>
     <style>
+        /* Generali */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
+
+        /* Header e Navbar */
         header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
+            background: #1d3557;
+            color: #fff;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 100;
         }
-        nav a {
-            margin: 0 15px;
+
+        header .logo {
+            font-size: 2.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav .menu li a {
+            color: #fff;
             text-decoration: none;
-            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
-        main {
-            padding: 20px;
+
+        nav .menu li a:hover {
+            color: #a8dadc;
+            transform: translateY(-4px);
         }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 180px 20px;
+            transition: padding 0.3s ease;
+        }
+
+        #hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #hero p {
+            font-size: 1.6rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        #hero .cta-btn {
+            display: inline-block;
+            background: #457b9d;
+            color: #fff;
+            padding: 18px 45px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero .cta-btn:hover {
+            background: #1d3557;
+            transform: translateY(-6px);
+        }
+
+        /* Sezione Soluzioni di Sicurezza */
+        #soluzioni-sicurezza {
+            background-color: #f1f1f1;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        #soluzioni-sicurezza h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #1d3557;
+        }
+
+        .solutions-cards {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .solution-card {
+            background: #fff;
+            padding: 35px;
+            width: 320px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            max-height: 450px;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .solution-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        .solution-card p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .solution-card a {
+            font-weight: 600;
+            color: #1d3557;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .solution-card a:hover {
+            color: #457b9d;
+        }
+
+        /* Sezione Difesa da Attacchi Hacker e Virus */
+        #difesa-minacce {
+            background-color: #fff;
+            padding: 80px 20px;
+            text-align: left;
+            color: #555;
+        }
+
+        #difesa-minacce h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 35px;
+            color: #1d3557;
+            text-align: center;
+        }
+
+        #difesa-minacce p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        #difesa-minacce ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #difesa-minacce ul li {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #difesa-minacce ul li strong {
+            font-weight: 700;
+        }
+
+        /* Footer */
         footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+            background-color: #1d3557;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #a8dadc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-icons a {
+            font-size: 1.8rem;
+            color: #a8dadc;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Benvenuto nella mia pagina web!</h1>
+        <div class="logo">Cyber Aware</div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#info">Info</a>
-            <a href="#contatti">Contatti</a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sicurezza.html">Sicurezza</a></li>
+                <li><a href="risorse.html">Risorse Educative</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Sezione Home</h2>
-            <p>Questa è una semplice pagina web in HTML.</p>
+        <section id="hero">
+            <h1>Benvenuto su Cyber Aware</h1>
+            <p>La tua guida per scoprire, prevenire e affrontare le minacce informatiche.</p>
+            <a href="#soluzioni-sicurezza" class="cta-btn">Esplora le Soluzioni di Sicurezza</a>
         </section>
 
-        <section id="info">
-            <h2>Sezione Info</h2>
-            <p>Puoi aggiungere qui informazioni sulla tua attività o sui tuoi interessi.</p>
-        </section>
+        <!-- Sezione Soluzioni di Sicurezza -->
+        <!-- Sezione Difesa da Attacchi Hacker e Virus -->
+        <section id="difesa-minacce">
+            <h2>Difesa Efficace da Attacchi Hacker e Virus</h2>
+            <p>La sicurezza informatica è un processo complesso e dinamico. Non esiste una soluzione unica per proteggersi dalle minacce, ma una combinazione di strategie può garantire una difesa robusta contro i cybercriminali. Ecco le tecniche fondamentali per proteggere i sistemi, i dati e la privacy online:</p>
+            
+            <h3>1. Software di Sicurezza di Ultima Generazione</h3>
+            <p>I moderni software antivirus e antimalware sono essenziali per rilevare, bloccare e rimuovere le minacce digitali. Le loro funzionalità includono:</p>
+            <ul>
+                <li><strong>Protezione in tempo reale:</strong> rilevano attività sospette e bloccano potenziali minacce prima che possano causare danni.</li>
+                <li><strong>Analisi comportamentale:</strong> oltre ai tradizionali database di firme dei virus, questi strumenti possono identificare nuovi tipi di malware basandosi sul comportamento del software.</li>
+                <li><strong>Scansioni automatiche:</strong> monitorano costantemente file, download, email e dispositivi USB per rilevare possibili infezioni.</li>
+                <li><strong>Aggiornamenti frequenti:</strong> le minacce evolvono rapidamente, quindi aggiornamenti regolari garantiscono la protezione contro le minacce più recenti.</li>
+            </ul>
+            <p><strong>Suggerimenti pratici:</strong></p>
+            <ul>
+                <li>Scegli software di sicurezza affidabili e rinomati, come Kaspersky, Bitdefender o Norton.</li>
+                <li>Configura scansioni automatiche settimanali e mantieni l'antivirus sempre aggiornato.</li>
+            </ul>
 
-        <section id="contatti">
-            <h2>Sezione Contatti</h2>
-            <p>Per contattarmi, scrivimi a: <a href="mailto:esempio@email.com">esempio@email.com</a></p>
+            <h3>2. Protezione tramite Firewall</h3>
+            <p>Un firewall funge da barriera tra il tuo dispositivo o rete interna e Internet. Questo sistema monitora e controlla il traffico in entrata e in uscita, bloccando le connessioni non autorizzate.</p>
+            <p><strong>Tipologie di firewall:</strong></p>
+            <ul>
+                <li><strong>Firewall hardware:</strong> dispositivi fisici posizionati tra la rete e la connessione Internet.</li>
+                <li><strong>Firewall software:</strong> programmi installati sui dispositivi per monitorare il traffico.</li>
+            </ul>
+            <p><strong>Funzionalità chiave:</strong></p>
+            <ul>
+                <li><strong>Controllo del traffico:</strong> il firewall analizza il contenuto dei pacchetti di dati e li blocca o li consente in base a regole predefinite.</li>
+                <li><strong>Protezione contro intrusioni:</strong> impedisce che hacker sfruttino vulnerabilità nei sistemi.</li>
+                <li><strong>Prevenzione delle connessioni malevole:</strong> blocca siti web pericolosi e tentativi di phishing.</li>
+            </ul>
+            <p><strong>Best practice:</strong></p>
+            <ul>
+                <li>Configura regole personalizzate per il traffico della rete.</li>
+                <li>Abilita il firewall integrato nel sistema operativo, come quello offerto da Windows o macOS.</li>
+            </ul>
+
+            <h3>3. Aggiornamenti Software e Patch di Sicurezza</h3>
+            <p>Le vulnerabilità nei software e nei sistemi operativi sono tra le principali porte d’accesso per i cybercriminali. Questi sfruttano falle di sicurezza per distribuire malware o ottenere accesso non autorizzato ai sistemi.</p>
+            <p><strong>Importanza degli aggiornamenti:</strong></p>
+            <ul>
+                <li><strong>Risoluzione di vulnerabilità:</strong> le patch risolvono problemi noti che potrebbero essere sfruttati dagli hacker.</li>
+                <li><strong>Miglioramento della stabilità:</strong> oltre alla sicurezza, gli aggiornamenti migliorano spesso le prestazioni del software.</li>
+                <li><strong>Compatibilità con nuove tecnologie:</strong> garantiscono che i sistemi funzionino correttamente con le ultime innovazioni.</li>
+            </ul>
+            <p><strong>Consigli utili:</strong></p>
+            <ul>
+                <li>Abilita l'aggiornamento automatico per sistemi operativi, browser e software critici.</li>
+                <li>Rimuovi software obsoleti o non supportati che potrebbero rappresentare un rischio.</li>
+            </ul>
+
+            <h3>4. Educazione Continua e Sensibilizzazione</h3>
+            <p>La componente umana è spesso il punto debole nelle strategie di sicurezza informatica. I cybercriminali sfruttano tecniche di ingegneria sociale per manipolare le persone e ottenere accesso ai dati sensibili.</p>
+            <p><strong>Minacce comuni:</strong></p>
+            <ul>
+                <li><strong>Phishing:</strong> email o messaggi falsi che cercano di ingannare l'utente per ottenere informazioni riservate.</li>
+                <li><strong>Ransomware:</strong> software dannoso che cripta i dati e chiede un riscatto per sbloccarli.</li>
+            </ul>
+            <p><strong>Educazione continua:</strong></p>
+            <ul>
+                <li>Offri corsi di formazione periodici su come identificare e proteggersi dalle minacce più comuni.</li>
+                <li>Incora i dipendenti a usare password robuste e a cambiare frequentemente le credenziali.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Tutti i diritti riservati</p>
+        <div class="footer-content">
+            <p>© 2025 Cyber Aware. Tutti i diritti riservati.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Termini e Condizioni</a>
+            </div>
+            <div class="social-icons">
+                <a href="#">🔗</a>
+                <a href="#">📱</a>
+                <a href="#">✉️</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
-
