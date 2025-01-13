@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Aware - La tua guida alla sicurezza informatica</title>
+    <style>
+        /* Generali */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header e Navbar */
+        header {
+            background: #1d3557;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav .menu li {
+            margin: 0 15px;
+        }
+
+        nav .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        #hero .cta-btn {
+            display: inline-block;
+            background: #457b9d;
+            color: #fff;
+            padding: 5px 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            width: auto;
+            text-align: center;
+        }
+
+        #hero .cta-btn:hover {
+            background: #1d3557;
+        }
+
+        /* Features Section */
+        #features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background: #fff;
+        }
+
+        .card {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #457b9d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .card .btn:hover {
+            background: #1d3557;
+        }
+
+        /* Home Description Section */
+        #home-description {
+            padding: 50px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        #home-description h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #home-description p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #home-description .cta-btn {
+            background: #457b9d;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #home-description .cta-btn:hover {
+            background: #1d3557;
+        }
+
+        /* Modifica il colore del testo nei riquadri */
+        #features .card h2, 
+        #features .card p {
+            color: #fff; 
+        }
+
+        /* Footer */
+        footer {
+            background: #1d3557;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Design responsivo per schermi più piccoli */
+        @media screen and (max-width: 768px) {
+            #features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            #home-description {
+                padding: 50px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Cyber Aware</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="minacce.html">Minacce</a></li>
+                <li><a href="sicurezza.html">Sicurezza</a></li>
+                <li><a href="risorse.html">Risorse Educative</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Benvenuto su Cyber Aware</h1>
+            <p>La tua guida per scoprire, prevenire e affrontare le minacce informatiche.</p>
+            <a href="minacce.html" class="cta-btn">Esplora le Minacce</a>
+        </section>
+
+        <section id="features">
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" aria-label="Immagine di minacce digitali">
+                <h2>Minacce</h2>
+                <p>Conosci i principali pericoli digitali come virus, phishing e attacchi hacker.</p>
+                <a href="minacce.html" class="btn">Scopri di più</a>
+            </div>
+            <div class="card" style="background-image: url('https://plus.unsplash.com/premium_photo-1700830328095-26c5a1c053b8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" aria-label="Immagine di sicurezza online">
+                <h2>Sicurezza</h2>
+                <p>Proteggi i tuoi dati con strumenti affidabili e pratiche consigliate.</p>
+                <a href="sicurezza.html" class="btn">Scopri di più</a>
+            </div>
+            <div class="card" style="background-image: url('https://plus.unsplash.com/premium_photo-1669652639356-f5cb1a086976?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" aria-label="Immagine di risorse educative">
+                <h2 style="color: black;">Risorse Educative</h2>
+                <p style="color: black;">Espandi le tue conoscenze con corsi e guide dettagliate.</p>
+                <a href="risorse.html" class="btn">Scopri di più</a>
+            </div>
+        </section>
+
+        <section id="home-description">
+            <h2>Cyber Aware: la tua risorsa per la sicurezza informatica</h2>
+            <p>Cyber Aware è la tua guida completa per affrontare e comprendere il mondo della sicurezza informatica. In un'era in cui gli attacchi digitali sono sempre più frequenti e sofisticati, la protezione dei tuoi dati e dispositivi è fondamentale. Con le nostre risorse educative, ti forniremo le informazioni più recenti e le pratiche migliori per salvaguardare la tua privacy online. La sicurezza non è mai stata così semplice da comprendere e applicare!</p>
+            <p>Se hai dubbi sulla sicurezza di un link o sospetti che un file possa contenere virus, puoi sempre contattarci tramite la pagina "Contatti". Il nostro team è a disposizione per analizzare il link o il file sospetto e offrirti la guida necessaria per proteggerti. Non esitare a chiedere aiuto, perché la tua sicurezza è la nostra priorità!</p>
+            <a href="sicurezza.html" class="cta-btn">Scopri di più</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cyber Aware. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
