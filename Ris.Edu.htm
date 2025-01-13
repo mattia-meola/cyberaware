@@ -3,66 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina HTML di Esempio</title>
+    <meta name="description" content="Risorse educative per la sicurezza informatica: guide, tutorial e strumenti utili per la protezione digitale.">
+    <title>Cyber Aware - Risorse Educative</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
+            background-color: #002b5c;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
         }
-        nav a {
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #003f7f;
+            margin: 0;
+        }
+        nav ul li {
             margin: 0 15px;
-            text-decoration: none;
-            color: white;
         }
-        main {
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #004f9f;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            font-size: 2em;
+            color: #002b5c;
+            margin-bottom: 20px;
+        }
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .resource-item {
+            background-color: #fff;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .resource-item h3 {
+            margin: 0 0 10px;
         }
         footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+            background-color: #002b5c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Benvenuto nella mia pagina web!</h1>
+        <div class="logo">Cyber Aware</div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#info">Info</a>
-            <a href="#contatti">Contatti</a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="minacce.html">Minacce</a></li>
+                <li><a href="sicurezza.html">Sicurezza</a></li>
+                <li><a href="risorse.html">Risorse Educative</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Sezione Home</h2>
-            <p>Questa è una semplice pagina web in HTML.</p>
+        <section id="hero">
+            <h1>Impara a Difenderti</h1>
+            <p>Guide, articoli e corsi per potenziare le tue conoscenze in cybersecurity.</p>
+            <a href="#materiali" class="cta-btn">Esplora le Risorse</a>
         </section>
 
-        <section id="info">
-            <h2>Sezione Info</h2>
-            <p>Puoi aggiungere qui informazioni sulla tua attività o sui tuoi interessi.</p>
+        <section id="guide">
+            <h2>Guide e Articoli</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>Protezione contro il Phishing</h3>
+                    <p>Impara come riconoscere e prevenire attacchi di phishing per proteggere i tuoi dati aziendali.</p>
+                </div>
+                <div class="resource-item">
+                    <h3>Best Practice per la Sicurezza IT</h3>
+                    <p>Linee guida per garantire la sicurezza dei sistemi aziendali e dei dati sensibili.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contatti">
-            <h2>Sezione Contatti</h2>
-            <p>Per contattarmi, scrivimi a: <a href="mailto:esempio@email.com">esempio@email.com</a></p>
+        <section id="video">
+            <h2>Video Tutorial</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>Configurazione di un Firewall Aziendale</h3>
+                    <p>Guida passo-passo per configurare un firewall e proteggere la rete aziendale.</p>
+                </div>
+                <div class="resource-item">
+                    <h3>Prevenzione degli Attacchi Ransomware</h3>
+                    <p>Strategie e strumenti per prevenire e mitigare gli attacchi ransomware.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="white-papers">
+            <h2>White Paper e Rapporti</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>Tendenze Globali nella Sicurezza Informatica</h3>
+                    <p>Un'analisi approfondita delle ultime tendenze e minacce nel settore.</p>
+                </div>
+                <div class="resource-item">
+                    <h3>Rapporto sugli Incidenti di Cybersecurity</h3>
+                    <p>Esamina i principali incidenti di sicurezza e le lezioni apprese.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="webinar">
+            <h2>Webinar e Eventi Formativi</h2>
+            <p>Partecipa ai nostri webinar per rimanere aggiornato sulle migliori pratiche di sicurezza IT.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Tutti i diritti riservati</p>
+        <p>&copy; 2025 Cyber Aware. Tutti i diritti riservati. <a href="#">Privacy Policy</a> | <a href="#">Termini di servizio</a></p>
     </footer>
 </body>
 </html>
-
